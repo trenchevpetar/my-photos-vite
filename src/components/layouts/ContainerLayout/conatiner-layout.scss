@@ -1,0 +1,28 @@
+.l-container {
+  position: relative;
+  width: 1320px;
+  margin: 0 auto;
+}
+
+.l-container--has-padding {
+  padding: 36px 0;
+}
+
+.l-container--is-narrow {
+  max-width: 720px;
+}
+
+.l-container--is-full-height {
+  height: calc(100vh - 60px);
+  overflow: hidden;
+}
+
+.l-container__header {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+
+  & > * + * {
+    margin-left: 15px;
+  }
+}
