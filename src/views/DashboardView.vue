@@ -10,6 +10,7 @@
 
 <script setup>
 import { onBeforeMount, computed, defineComponent } from 'vue'
+import { useLoginStore } from '../stores/login';
 import { usePhotosStore } from '../stores/photos'
 import ContainerLayout from '../components/layouts/ContainerLayout/ContainerLayout.vue'
 import MasonryLayout from '../components/layouts/MasonryLayout/MasonryLayout.vue'
@@ -19,6 +20,7 @@ defineComponent({
   MasonryLayout,
 })
 
+const loginStore = useLoginStore()
 const photosStore = usePhotosStore()
 onBeforeMount(() => photosStore.getPhotos())
 const photos = computed(() => photosStore.getAllPhotos)
